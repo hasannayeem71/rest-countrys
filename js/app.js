@@ -8,7 +8,6 @@ getCountrys();
 const displayCountry = (data) => {
   const countryCountainer = document.getElementById("row");
   for (country of data) {
-    const x = country;
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `
