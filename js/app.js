@@ -8,7 +8,7 @@ getCountrys();
 const displayCountry = (data) => {
   const countryCountainer = document.getElementById("row");
   for (country of data) {
-      const x= country;
+    const x = country;
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `
@@ -23,13 +23,15 @@ const displayCountry = (data) => {
   }
 };
 
-const deteils = name => {
-   const url= `https://restcountries.eu/rest/v2/name/${name}`
-   fetch(url).then(res=>res.json()).then(data=>showDetails(data[0]))
+const deteils = (name) => {
+  const url = `https://restcountries.eu/rest/v2/name/${name}`;
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => showDetails(data[0]));
 };
-const showDetails = data=>{
-const asid = document.getElementById('deteils');
-    asid.innerHTML=`
+const showDetails = (data) => {
+  const asid = document.getElementById("deteils");
+  asid.innerHTML = `
     <img src="${data.flag}" class="detail-img">
             <h3 class="text-center">${data.name}</h3>
             <p>Capital: ${data.capital}</p>
@@ -42,5 +44,5 @@ const asid = document.getElementById('deteils');
             <p>Region: ${data.region}</p>
             <p>Subregion: ${data.subregion}</p>
             <p>Top Level Domain: ${data.topLevelDomain}</p>
-    `
-}
+    `;
+};
