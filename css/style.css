@@ -10,13 +10,10 @@ nav{
 .country-img{
     width: 100%;
 }
-/* aside{
-  scrollbar-width: none;
-  
-} */
 .aside-style{
 height: calc(100vh - 60px);
 overflow-y: scroll;
+overflow-x: visible;
 position: sticky;
 top: 80px;
 }
