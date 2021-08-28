@@ -9,7 +9,7 @@ const displayCountry = (data) => {
   const countryCountainer = document.getElementById("row");
   for (country of data) {
     const div = document.createElement("div");
-    div.classList.add("col");
+    div.classList.add("col-lg-4");
     div.innerHTML = `
         <div class="card h-100 " >
             <img src="${country.flag}" onclick="deteils('${country.name}')" class="card-img-top img-fluid " alt="...">
@@ -31,7 +31,7 @@ const deteils = (name) => {
 const showDetails = (data) => {
   const asid = document.getElementById("deteils");
   asid.innerHTML = `
-    <img src="${data.flag}" class="detail-img">
+    <img src="${data.flag}" class="detail-img img-fluid">
             <h3 class="text-center">${data.name}</h3>
             <p>Capital: ${data.capital}</p>
             <p>Alpha2 Code : ${data.alpha2Code}</p>
