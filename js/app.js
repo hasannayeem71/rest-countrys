@@ -43,5 +43,6 @@ const showDetails = (data) => {
             <p>Region: ${data.region}</p>
             <p>Subregion: ${data.subregion}</p>
             <p>Top Level Domain: ${data.topLevelDomain}</p>
+            
     `;
 };

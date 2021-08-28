@@ -3,14 +3,44 @@ body{
     font-family: 'Besley', serif;
     background-color: rgba(0, 255, 255, 0.26);
 }
+
+nav{
+    background-color: rgb(28, 56, 117);
+}
 .country-img{
     width: 100%;
 }
-aside{
-    position: sticky;
-    top: 20px;
+/* aside{
+  scrollbar-width: none;
   
+} */
+.aside-style{
+height: calc(100vh - 60px);
+overflow-y: scroll;
+position: sticky;
+top: 65px;
+
 }
 .text{
     overflow-wrap: break-word;
+}
+
+
+
+aside::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+aside::-webkit-scrollbar-thumb {
+  background-color: rgba(41, 65, 202, 0.432);
+
+}
+body::-webkit-scrollbar {
+    width: 1rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(41, 66, 202);
+  border-radius: 50px;
+  /* outline: 1px solid rgb(11, 87, 163); */
 }
