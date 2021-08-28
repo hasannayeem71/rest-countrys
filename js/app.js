@@ -37,7 +37,7 @@ const showDetails = (data) => {
             <p>Alpha2 Code : ${data.alpha2Code}</p>
             <p>Alpha3 Code : ${data.alpha3Code}</p>
             <p>Area: ${data.area} </p>
-            <p class="text-truncate">Borders: ${data.borders}</p>
+            <p class="text">Borders: ${data.borders}</p>
             <p>Languages: ${data.languages[0].name}</p>
             <p>Population: ${data.population}</p>
             <p>Region: ${data.region}</p>

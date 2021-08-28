@@ -11,3 +11,6 @@ aside{
     top: 20px;
   
 }
+.text{
+    overflow-wrap: break-word;
+}
