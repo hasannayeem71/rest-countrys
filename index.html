@@ -15,23 +15,43 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg fixed-top mx-auto">
-        <h5 class="text-center ms-5 text-white" onclick="getCountrys()">
-          Home
-        </h5>
-        <div class="form-inline my-2 my-lg-0 mx-auto">
-          <input
-            id="search-input"
-            class="mr-sm-2 p-2"
-            placeholder="Search Country"
-          />
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mx-auto"
+      >
+        <div class="container mx-auto">
           <button
-            onclick="viewSearchResult()"
-            class="btn btn-sm btn-outline-info py-2 my-sm-0 text-white"
-            type="submit"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            Search
+            <span class="navbar-toggler-icon"></span>
           </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <p
+              class="text-center ms-5 text-white navbar-brand"
+              onclick="getCountrys()"
+            >
+              Home
+            </p>
+            <div class="d-flex">
+              <input
+                id="search-input"
+                class="form-control"
+                placeholder="Search Country"
+                placeholder="Search"
+              />
+              <button
+                onclick="viewSearchResult()"
+                class="btn btn-sm btn-outline-info my-sm-0 text-white"
+              >
+                Search
+              </button>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
