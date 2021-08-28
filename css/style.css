@@ -18,9 +18,9 @@ nav{
 height: calc(100vh - 60px);
 overflow-y: scroll;
 position: sticky;
-top: 65px;
-
+top: 80px;
 }
+
 .text{
     overflow-wrap: break-word;
 }
@@ -32,7 +32,7 @@ aside::-webkit-scrollbar {
 }
  
 aside::-webkit-scrollbar-thumb {
-  background-color: rgba(41, 65, 202, 0.432);
+  background-color: rgba(195, 203, 247, 0.199);
 
 }
 body::-webkit-scrollbar {
@@ -40,7 +40,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(41, 66, 202);
+  background-color: rgb(7, 31, 167);
   border-radius: 50px;
   /* outline: 1px solid rgb(11, 87, 163); */
 }

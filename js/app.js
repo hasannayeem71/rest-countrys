@@ -7,15 +7,27 @@ getCountrys();
 
 const displayCountry = (data) => {
   const countryCountainer = document.getElementById("row");
-  for (country of data) {
-    const div = document.createElement("div");
-    div.classList.add("col-lg-4");
-    div.innerHTML = `
+  countryCountainer.textContent = "";
+  if (data.status != 404) {
+    for (country of data) {
+      const div = document.createElement("div");
+      div.classList.add("col-lg-4");
+      div.innerHTML = `
         <div class="card h-100 " >
             <img src="${country.flag}" onclick="deteils('${country.name}')" class="card-img-top img-fluid " alt="...">
             <div class="card-body">
                 <h5 class="card-title">${country.name}</h5>
             </div>
+        </div>
+        `;
+      countryCountainer.appendChild(div);
+    }
+  } else {
+    const div = document.createElement("div");
+
+    div.innerHTML = `
+        <div >
+            <h1 class="text-center">404 Enter full country name</h1>
         </div>
         `;
     countryCountainer.appendChild(div);
@@ -42,7 +54,23 @@ const showDetails = (data) => {
             <p>Population: ${data.population}</p>
             <p>Region: ${data.region}</p>
             <p>Subregion: ${data.subregion}</p>
-            <p>Top Level Domain: ${data.topLevelDomain}</p>
-            
-    `;
+            <p class='mb-5'>Top Level Domain: ${data.topLevelDomain}</p>`;
+};
+
+//
+
+const viewSearchResult = () => {
+  const inputField = document.getElementById("search-input");
+  const inputText = inputField.value;
+  inputField.value = "";
+  if (inputText.length == 0) {
+    alert("Enter valid country name");
+  } else {
+    const url = `https://restcountries.eu/rest/v2/name/${inputText}?fullText=true`;
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        displayCountry(data);
+      });
+  }
 };

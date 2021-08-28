@@ -15,11 +15,19 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <nav class="navbar navbar-expand-lg fixed-top mx-auto">
+        <h5 class="text-center ms-5 text-white" onclick="getCountrys()">
+          Home
+        </h5>
         <div class="form-inline my-2 my-lg-0 mx-auto">
-          <input class="mr-sm-2 p-2" placeholder="Search Country" />
+          <input
+            id="search-input"
+            class="mr-sm-2 p-2"
+            placeholder="Search Country"
+          />
           <button
-            class="btn btn-sm btn-outline-primary py-2 my-sm-0"
+            onclick="viewSearchResult()"
+            class="btn btn-sm btn-outline-info py-2 my-sm-0 text-white"
             type="submit"
           >
             Search
@@ -38,7 +46,7 @@
 
         <div class="col-lg-3 col-md-5 col-6">
           <aside id="deteils" class="ps-4 mx-auto aside-style">
-            <h6>Click on flag</h6>
+            <h6>Click on flag to see details</h6>
           </aside>
         </div>
       </section>
