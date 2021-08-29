@@ -27,7 +27,7 @@ const displayCountry = (data) => {
 
     div.innerHTML = `
         <div >
-            <h1 class="text-center">404 Enter full country name</h1>
+            <h1 class="text-center text-muted ">404 Enter full country name</h1>
         </div>
         `;
     countryCountainer.appendChild(div);
@@ -41,6 +41,7 @@ const deteils = (name) => {
     .then((data) => showDetails(data[0]));
 };
 const showDetails = (data) => {
+  // console.log(data);
   const asid = document.getElementById("deteils");
   asid.innerHTML = `
     <img src="${data.flag}" class="detail-img img-fluid">
@@ -48,13 +49,18 @@ const showDetails = (data) => {
             <p>Capital: ${data.capital}</p>
             <p>Alpha2 Code : ${data.alpha2Code}</p>
             <p>Alpha3 Code : ${data.alpha3Code}</p>
+            <p>Alt Spellings: ${data.altSpellings}</p>
             <p>Area: ${data.area} </p>
             <p class="text">Borders: ${data.borders}</p>
             <p>Languages: ${data.languages[0].name}</p>
             <p>Population: ${data.population}</p>
             <p>Region: ${data.region}</p>
             <p>Subregion: ${data.subregion}</p>
-            <p class='mb-5'>Top Level Domain: ${data.topLevelDomain}</p>`;
+            <p>Calling Code : ${data.callingCodes[0]}</p>
+            <p>Time zone: ${data.timezones[0]}</p>
+            <p class='mb-5'>Top Level Domain: ${data.topLevelDomain}</p>
+            
+            `;
 };
 
 //

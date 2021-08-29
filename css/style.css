@@ -10,6 +10,9 @@ nav{
 .country-img{
     width: 100%;
 }
+.home{
+    cursor: pointer;
+}
 .aside-style{
 height: calc(100vh - 60px);
 overflow-y: scroll;
