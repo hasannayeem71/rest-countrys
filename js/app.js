@@ -49,7 +49,7 @@ const showDetails = (data) => {
             <p>Capital: ${data.capital}</p>
             <p>Alpha2 Code : ${data.alpha2Code}</p>
             <p>Alpha3 Code : ${data.alpha3Code}</p>
-            <p>Alt Spellings: ${data.altSpellings}</p>
+            <p class="text">Alt Spellings: ${data.altSpellings}</p>
             <p>Area: ${data.area} </p>
             <p class="text">Borders: ${data.borders}</p>
             <p>Languages: ${data.languages[0].name}</p>
